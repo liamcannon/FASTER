@@ -1,12 +1,13 @@
 ﻿
-using Microsoft.AppCenter;
-using Microsoft.AppCenter.Analytics;
-using Microsoft.AppCenter.Crashes;
-
 using System;
 using System.Globalization;
 using System.Windows;
+
 using ControlzEx.Theming;
+
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 
 namespace FASTER
 {

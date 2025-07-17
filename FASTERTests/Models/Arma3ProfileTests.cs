@@ -1,5 +1,6 @@
-﻿using NUnit.Framework;
-using System.Linq;
+﻿using System.Linq;
+
+using NUnit.Framework;
 
 namespace FASTER.Models.Tests
 {

@@ -16,11 +16,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.github\workflows\publish.yml = .github\workflows\publish.yml
 		README.md = README.md
 		.github\workflows\release.yml = .github\workflows\release.yml
+		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FASTERTests", "FASTERTests\FASTERTests.csproj", "{65FDF864-BF9B-414A-A6E6-3473BCFB62BE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FASTER Maintenance", "FASTER Maintenance\FASTER Maintenance.csproj", "{465FB100-A08C-4E4F-A321-EC85C5C177B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BytexDigital.Steam", "BytexDigital.Steam\BytexDigital.Steam\BytexDigital.Steam.csproj", "{07CE1250-4C31-4E76-8316-047915E1FF6B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,6 +41,10 @@ Global
 		{65FDF864-BF9B-414A-A6E6-3473BCFB62BE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{465FB100-A08C-4E4F-A321-EC85C5C177B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{465FB100-A08C-4E4F-A321-EC85C5C177B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07CE1250-4C31-4E76-8316-047915E1FF6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07CE1250-4C31-4E76-8316-047915E1FF6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07CE1250-4C31-4E76-8316-047915E1FF6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07CE1250-4C31-4E76-8316-047915E1FF6B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

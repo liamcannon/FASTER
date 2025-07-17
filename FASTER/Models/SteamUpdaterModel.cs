@@ -1,12 +1,13 @@
-﻿using FASTER.Properties;
-using System.ComponentModel;
+﻿using System.ComponentModel;
+
+using FASTER.Properties;
 
 namespace FASTER.Models
 {
     public class SteamUpdaterModel : INotifyPropertyChanged
     {
         private string _output;
-        private bool   _isUpdating;
+        private bool _isUpdating;
         private double _progress;
 
 

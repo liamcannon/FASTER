@@ -1,10 +1,10 @@
-﻿using FASTER.Models;
-
-using Microsoft.AppCenter.Analytics;
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Windows;
+
+using FASTER.Models;
+
+using Microsoft.AppCenter.Analytics;
 
 namespace FASTER.Views
 {

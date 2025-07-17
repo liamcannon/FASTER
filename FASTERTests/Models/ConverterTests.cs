@@ -1,7 +1,7 @@
-﻿using NUnit.Framework;
-
-using System;
+﻿using System;
 using System.Windows.Media;
+
+using NUnit.Framework;
 
 namespace FASTER.Models.Tests
 {
@@ -57,7 +57,7 @@ namespace FASTER.Models.Tests
             SolidColorBrush c2 = _converter.Convert(false, typeof(SolidColorBrush), null, System.Globalization.CultureInfo.InvariantCulture) as SolidColorBrush;
 
             Assert.That(c1.Color, Is.EqualTo(new SolidColorBrush(Color.FromRgb(190, 17, 0)).Color));
-            Assert.That(c2.Color, Is.EqualTo(new SolidColorBrush().Color)); 
+            Assert.That(c2.Color, Is.EqualTo(new SolidColorBrush().Color));
         }
 
         [Test()]

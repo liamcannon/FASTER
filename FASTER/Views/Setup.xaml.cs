@@ -1,16 +1,16 @@
-﻿using FASTER.Models;
-
-using Microsoft.AppCenter;
-using Microsoft.AppCenter.Analytics;
-using Microsoft.AppCenter.Crashes;
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Reflection;
 using System.Windows;
+
+using FASTER.Models;
+
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 
 namespace FASTER.Views
 {
@@ -87,7 +87,7 @@ namespace FASTER.Views
             IServerDirBox.Text = Properties.Settings.Default.serverPath;
 
             //Do not skip to mainwindow if it was FirstRun
-            if (wasFirstRun ) return;
+            if (wasFirstRun) return;
 
             try
             {
@@ -110,7 +110,7 @@ namespace FASTER.Views
             }
             catch (Exception e)
             {
-                Crashes.TrackError(e, new Dictionary<string, string> { {"Message", $"Could not start FASTER: \n[{ e.GetType()}] { e.Message}\n\n{ e.StackTrace}"}});
+                Crashes.TrackError(e, new Dictionary<string, string> { { "Message", $"Could not start FASTER: \n[{e.GetType()}] {e.Message}\n\n{e.StackTrace}" } });
                 using EventLog eventLog = new EventLog("Application")
                 { Source = "FASTER" };
                 eventLog.WriteEntry($"Could not start FASTER : \n[{e.GetType()}] {e.Message}\n\n{e.StackTrace}", EventLogEntryType.Error);
@@ -149,7 +149,7 @@ namespace FASTER.Views
         {
             var encryption = Encryption.Instance;
 
-            if(string.IsNullOrEmpty(IModStaging.Text))
+            if (string.IsNullOrEmpty(IModStaging.Text))
             {
                 DisplaySetupMessage("Please enter a valid Mod Staging Directory");
                 return;

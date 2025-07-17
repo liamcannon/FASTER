@@ -1,10 +1,4 @@
-﻿using BytexDigital.Steam.Core;
-
-using MahApps.Metro.Controls.Dialogs;
-
-using Newtonsoft.Json.Linq;
-
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.IO;
 using System.Net;
@@ -12,6 +6,12 @@ using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
+
+using BytexDigital.Steam.Core;
+
+using MahApps.Metro.Controls.Dialogs;
+
+using Newtonsoft.Json.Linq;
 
 namespace FASTER.Models
 {

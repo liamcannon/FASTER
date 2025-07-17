@@ -1,6 +1,6 @@
-﻿using NUnit.Framework;
+﻿using System.Runtime.Versioning;
 
-using System.Runtime.Versioning;
+using NUnit.Framework;
 
 namespace FASTER.Models.Tests
 {

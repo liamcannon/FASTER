@@ -1,16 +1,16 @@
-﻿using FASTER.Models;
-
-using MahApps.Metro.Controls.Dialogs;
-
-using Microsoft.AppCenter.Analytics;
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+
+using FASTER.Models;
+
+using MahApps.Metro.Controls.Dialogs;
+
+using Microsoft.AppCenter.Analytics;
 
 namespace FASTER.ViewModel
 {
@@ -26,7 +26,7 @@ namespace FASTER.ViewModel
 
         internal void DisplayMessage(string msg)
         {
-            MainWindow.Instance.IFlyout.IsOpen         = true;
+            MainWindow.Instance.IFlyout.IsOpen = true;
             MainWindow.Instance.IFlyoutMessage.Content = msg;
         }
 
@@ -62,7 +62,7 @@ namespace FASTER.ViewModel
             var mod = new ArmaMod
             {
                 WorkshopId = modIDOut,
-                Path       = Path.Combine(Properties.Settings.Default.modStagingDirectory, modID),
+                Path = Path.Combine(Properties.Settings.Default.modStagingDirectory, modID),
                 IsLocal = false
             };
 
@@ -107,7 +107,8 @@ namespace FASTER.ViewModel
                     continue;
                 }
 
-                await Task.Factory.StartNew(() => {
+                await Task.Factory.StartNew(() =>
+                {
                     Directory.CreateSymbolicLink(newPath, oldPath);
                     var progressDone = oldPaths.IndexOf(oldPath);
                     progress.SetMessage($"Copying mod from {oldPath}\n{progressDone} / {progress.Maximum}");
@@ -178,7 +179,7 @@ namespace FASTER.ViewModel
                 try
                 {
                     url = url.Replace("&", "^&");
-                    Process.Start(new ProcessStartInfo("cmd", $"/c start {url}") {CreateNoWindow = true});
+                    Process.Start(new ProcessStartInfo("cmd", $"/c start {url}") { CreateNoWindow = true });
                 }
                 catch
                 { DisplayMessage($"Could not open \"{url}\""); }
@@ -205,7 +206,7 @@ namespace FASTER.ViewModel
                     continue;
                 }
 
-                if(!await Task.Run(() => extractedMod.IsOnWorkshop()))
+                if (!await Task.Run(() => extractedMod.IsOnWorkshop()))
                     continue;
 
                 ModsCollection.AddSteamMod(extractedMod);
@@ -223,7 +224,7 @@ namespace FASTER.ViewModel
             ProcessStartInfo startInfo = new()
             {
                 Arguments = mod.Path,
-                FileName  = "explorer.exe"
+                FileName = "explorer.exe"
             };
 
             Process.Start(startInfo);
@@ -251,7 +252,7 @@ namespace FASTER.ViewModel
 
             MainWindow.Instance.NavigateToConsole();
             var ans = await MainWindow.Instance.SteamUpdaterViewModel.RunModsUpdater(ModsCollection.ArmaMods);
-            if(ans == UpdateState.LoginFailed) 
+            if (ans == UpdateState.LoginFailed)
                 DisplayMessage("Steam Login Failed");
         }
     }

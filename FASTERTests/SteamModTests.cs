@@ -1,7 +1,8 @@
 ﻿using System;
-using NUnit.Framework;
 using System.IO;
 using System.Reflection;
+
+using NUnit.Framework;
 // ReSharper disable CheckNamespace
 
 namespace FASTER.Models.Tests

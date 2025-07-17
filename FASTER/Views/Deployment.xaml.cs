@@ -1,6 +1,7 @@
-﻿using FASTER.Models;
+﻿using System.Windows;
+
+using FASTER.Models;
 using FASTER.ViewModel;
-using System.Windows;
 
 namespace FASTER.Views
 {
